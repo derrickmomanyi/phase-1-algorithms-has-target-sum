@@ -1,6 +1,16 @@
-function hasTargetSum(array, target) {
+
   // Write your algorithm here
-}
+  function hasTargetSum(array, target) {
+    const newNumbers = [...array]
+
+    for (const element of array) {
+    const addingNumber = target - element;
+    if (addingNumber in newNumbers)
+    return true;  
+    newNumbers[element] = true;
+    }
+    return false;
+  }
 
 /* 
   Write the Big O time complexity of your function here
